@@ -1,11 +1,12 @@
 body, html {
     height: 100%;
     margin: 0;
-    
+    font-family: 'Open Sans', sans-serif;
 }
 
 pre, p{
     margin: 0;
+    text-decoration: none;
 }
 
 body {
@@ -13,11 +14,17 @@ body {
 }
 
 a {
-    text-decoration: underline;
+    text-decoration: none;
     color: #e0245e;
 }
 
-.flex-container {
+h1 {
+    font-weight: lighter;
+    font-size: 1rem;
+}
+
+/*Main Page*/
+.flex-main {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -32,6 +39,7 @@ a {
 .sub-text {
     color: whitesmoke;
     margin: 1rem;
+    font-weight: lighter;
 }
 
 .nav-bar {
@@ -40,8 +48,62 @@ a {
     color: whitesmoke;
     justify-content: space-evenly;
     align-items: center;
+    font-weight: lighter;
 }
 
 .separator {
     margin: 0.5rem;
 }
+
+/*Journal Page*/
+.journal-flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.journal-title {
+    color: #e0245e;
+    align-self: center;
+}
+
+.entry {
+    margin-left: 1rem;
+    color: #e0245e;;
+    width: 90vw;
+    font-size: smaller;
+    line-height: 1.5rem;
+}
+
+.entry>h1 {
+    margin: 1rem 0;
+    font-weight: 100;
+    font-size: medium;
+}
+
+.entry>a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: 1px dashed #e0245e;
+}
+
+.expanded>p {
+
+    width: 90vw;
+    padding: 0.6rem 0;
+}
+
+@media (min-width: 1024px) {
+    .expanded>p {
+        width: 35vw;
+        padding: 0.6rem 0;
+        font-size: 0.9rem;
+    }
+
+    .journal-title {
+        color: #e0245e;
+        align-self: flex-start;
+        margin-left: 1rem;
+    }
+  }
