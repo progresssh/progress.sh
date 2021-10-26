@@ -21,8 +21,12 @@ a {
 h1 {
     font-weight: lighter;
     font-size: 1rem;
+    color: #e0245e;
 }
 
+p {
+    color:#C0C0C0;
+}
 /*Main Page*/
 .flex-main {
     height: 100%;
