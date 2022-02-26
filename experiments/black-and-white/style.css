@@ -1,0 +1,52 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+canvas {
+    border: 1px white dashed;
+}
+
+p {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: #e0245e;
+}
+
+.slider-container>input {
+    width: 25%;
+}
+
+.slider-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container>canvas {
+    max-width: 80vmax;
+    max-height: 80vmin;
+}
+
+
+.title {
+    color: white;
+    text-align: center;
+}
+
+.choice {
+    display: flex;
+    justify-content: center;
+}
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>B&W Progress</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1 class="title">Black and White Experiment</h1>
+
+        <div class="choice">
+            <input  type="file"
+                    id="image" name="image"
+                    accept="image/png, image/jpeg, image/gif">   
+
+        </div>
+        <div class="slider-container">
+            Luminance Threshold (R + G + B)
+            <input type="range" min="0" max="765" value="384" class="slider">
+            <p id="slider-value">384</p>
+        </div>
+        <div class="image-container">       
+            <canvas></canvas>
+            <p>Large images will take some time to load.</p>
+            <p><a href="../../index.html">Return Home</a></p>
+        </div>
+
+        <script src="main.js"></script>
+    </body>
+</html>
