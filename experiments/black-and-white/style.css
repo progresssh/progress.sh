@@ -20,6 +20,10 @@ a {
     width: 25%;
 }
 
+.slider-container>p {
+    margin: 0;
+}
+
 .slider-container {
     display: flex;
     flex-direction: column;

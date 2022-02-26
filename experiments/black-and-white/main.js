@@ -2,6 +2,7 @@ const imageSelect = document.querySelector("input[type='file']")
 const divContent = document.querySelector("div[class='image-container']")
 const canvas = document.querySelector('canvas')
 const slider = document.querySelector("input[type='range']")
+const button = document.querySelector('button')
 const ctx = canvas.getContext('2d')
 const img1 = new Image()
 
@@ -14,6 +15,9 @@ function getImage() {
 }
 
 slider.addEventListener('input', () => output.innerHTML = slider.value)
+
+button.addEventListener('click', () => slider.value = 384)
+button.addEventListener('click', () => output.innerHTML = slider.value)
 
 function drawImage(source) {
 
@@ -40,8 +44,8 @@ function drawImage(source) {
             pixel[blue] = value
 
         }
-        ctx.clearRect(0,0,canvas.width,canvas.height)
-        ctx.putImageData(imgData,0,0)
+        ctx.clearRect(0, 0, canvas.width, canvas.height)
+        ctx.putImageData(imgData, 0, 0)
     })
 }
 
@@ -52,3 +56,7 @@ imageSelect.addEventListener('input', () => {
 slider.addEventListener('change', () => {
     drawImage(getImage())
 })
+
+button.addEventListener('click', () => slider.value = 384)
+button.addEventListener('click', () => output.innerHTML = slider.value)
+button.addEventListener('click', () => drawImage(getImage()))
